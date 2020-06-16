@@ -13,6 +13,27 @@ Este endpint é responsavel por fazer a autenticação do usuario e gerar um tok
     "password": "suasenha"
 }
 ```
+#### Resposta
+```
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE1OTIzMzYyNjMsImV4cCI6MTU5MjUwOTA2M30.QH3CFfPvRq6kyzKIv9QEe3PsjjXB8zZMwNTy-1E0Hgw"
+}
+```
+#### Erros que podem ocorer são 400 e 401
+O erro 400 é quando não foi mandado alguma informação para gerar o token, como e-mail ou senha.
+##### Exemplo
+```
+{
+    "email": "seuemail@email.com",
+    "password": ""
+}
+```
+Vai retornar uma menssagem de erro.
+```
+{
+    "message": "Credenciais Invalidas"
+}
+```
 
 ### GET /games
 Este endpint é responsavel por trazer do banco de dados todos os registros dos games cadastrador.
@@ -89,5 +110,26 @@ Este endpoint é responsavel por cadastrar um novo game, ele prescisa do token d
     "yaer": "Ano do Jogo",
     "price": Preço do Jogo,
 }
+```
 
+### PUT /games
+Esse endpoint é utilizado para atualizar um game, ele prescisa do id do games, o id tem que ser mandado na url.
+Exemplo:
+
+(http://localhost:8080/games/6)
+
+
+```
+{
+    "title": "Novo Titulo do Jogo",
+    "yaer": "Novo Ano do Jogo",
+    "price": Novo Preço do Jogo,
+}
+```
+
+##### Resposta
+```
+{
+    "message": "Atualizado com Sucesso!"
+}
 ```
