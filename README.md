@@ -9,7 +9,7 @@ Este endpint é responsavel por fazer a autenticação do usuario e gerar um tok
 ###### Como Autenticar
 ```
 {
-    "email": "seremail@email.com",
+    "email": "seuemail@email.com",
     "password": "suasenha"
 }
 ```
@@ -81,7 +81,7 @@ Exemplo de Erro:
 ```
 
 ### POST  /games
-Este endpint é responsavel por cadastrar um novo game, ele prescisa do token de autorização e do game para ser salvo no banco.
+Este endpoint é responsavel por cadastrar um novo game, ele prescisa do token de autorização e do game para ser salvo no banco.
 
 ```
 {
