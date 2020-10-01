@@ -1,4 +1,4 @@
-// NAS ROTAR POST PUT E DELETE O AXIOSCONFIG VAI SEMPRE DEPOIS DOS PARAMETROS.
+// NAS ROTAR POST PUT E DELETE O AXIOSCONFIG VAI SEMPRE DEPOIS DA URL.
 var axiosConfig = {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('Token')}`
